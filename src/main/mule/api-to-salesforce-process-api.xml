@@ -52,5 +52,14 @@ payload map ( payload01 , indexOfPayload01 ) -> {
 				<ee:set-payload ><![CDATA["Contacts Oneil Cruz and Roansy Contreras successfully added to Salesforce!"]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
+		<ee:transform doc:name="Transform Message" doc:id="5ff47305-ccc0-4606-9a02-a502236ebcb8" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/java
+---
+{
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
 	</flow>
 </mule>
