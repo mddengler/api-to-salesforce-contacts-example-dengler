@@ -46,6 +46,7 @@ payload map ( payload01 , indexOfPayload01 ) -> {
 			</ee:message>
 		</ee:transform>
 		<salesforce:upsert doc:name="Insert / Update Contact in Salesforce" doc:id="6c112e95-4947-41c1-940f-d5dafafb6e5f" config-ref="Salesforce_Config" objectType="Contact" externalIdFieldName="Email"/>
+		<logger level="INFO" doc:name="Logger" doc:id="b38bf478-9009-4d74-932c-97a88a19443a" message="#[payload]"/>
 		<ee:transform doc:name="Craft Response to User" doc:id="52fda3f3-e928-4e7c-9c92-1aeb1b2070c7" >
 			<ee:message >
 				<ee:set-payload ><![CDATA["Contacts Oneil Cruz and Roansy Contreras successfully added to Salesforce!"]]></ee:set-payload>
